@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    private float _score = 0.0f;
-
-    public Text scoretext;
-
-
-    void Update()
+    [SerializeField]
+    private Text _scoreText;
+    // Start is called before the first frame update
+    void Start()
     {
-        //increment score with time 
-        _score += Time.deltaTime;
-        //display on screen as an int value
-        scoretext.text = ((int)_score).ToString();
+        _scoreText.text = "Score : " + 0;
     }
 
+    public void UpdateScore(int playerScore)
+    {
+        _scoreText.text = "Score : " + playerScore.ToString();
+    }
 }

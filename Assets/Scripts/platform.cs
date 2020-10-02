@@ -10,8 +10,5 @@ public class platform : MonoBehaviour
     {
         _platformManager = GameObject.FindObjectOfType<PlatformManager>();
     }
-    private void OnBecameInvisible()
-    {
-        _platformManager.RecyclePlatform(this.gameObject);
-    }
+
 }
